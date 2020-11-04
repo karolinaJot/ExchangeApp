@@ -1,0 +1,10 @@
+﻿@model ItemAddedModel
+
+<h1>You added it!</h1>
+<h3>Your item was successfully added</h3>
+
+<h5>It looks like this:</h5>
+
+<div>Chars in Name: @Model.NumberOfCharsInName</div>
+<div>Chars in Description: @Model.NumberofCharsInDescription</div>
+<div>Is the Item currently hidden: @(Model.IsHidden ? "yes" : "no" )</div>
