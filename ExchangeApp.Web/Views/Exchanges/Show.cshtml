@@ -4,6 +4,8 @@
 <br />
 <h3>Add new item</h3>
 
+<div id="success-alert" class="alert alert-success" style="display: none">You added it successfully!</div>
+
 <form method="POST">
 	<div class="form-group">
 		<label asp-for="Name">Name it</label>
@@ -23,3 +25,7 @@
 		<input class="btn btn-primary" type="submit" value ="Add it" />
 	</div>
 </form>
+
+@section Scripts{
+	<script src="~/js/addNewItem.js"></script>
+ }
