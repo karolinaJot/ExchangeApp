@@ -13,16 +13,16 @@
 
 		if (responseJson.success) {
 			// 3 un-hide the alertElement when the request has been successful
-			// alertElement.style....
+			alertElement.style.display = "block";
 		}
 	};
 
-	window.addEventListener("load", () => {
-		formElement.addEventListener("submit", event => {
-			event.preventDefault();
+	//window.addEventListener("load", () => {
+	//	formElement.addEventListener("submit", event => {
+	//		event.preventDefault();
 
-			addNewItem().then(() => console.log("Added successfully"));
-		});
-	});
+	//		addNewItem().then(() => console.log("Added successfully"));
+	//	});
+	//});
 
 })();

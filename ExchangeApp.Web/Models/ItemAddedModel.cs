@@ -10,5 +10,8 @@ namespace ExchangeApp.Web.Models
 		public int NumberOfCharsInName { get; set; }
 		public int NumberofCharsInDescription { get; set; }
 		public bool IsHidden { get; set; }
+		public int Id { get; set; }
+
+		public string Name { get; set; }
 	}
 }

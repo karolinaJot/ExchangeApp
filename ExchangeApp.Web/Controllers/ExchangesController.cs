@@ -14,19 +14,29 @@ namespace ExchangeApp.Web.Controllers
 		{
 			return View();
 		}
+	
 
 		[HttpPost]
 		public IActionResult Show(ItemModel item)
 		{
 			var viewModel = new ItemAddedModel
 			{
-				NumberOfCharsInName = item.Name.Length,
-				NumberofCharsInDescription = item.Description.Length,
-				IsHidden = !item.IsVisible
+				//NumberOfCharsInName = item.Name.Length,
+				//NumberofCharsInDescription = item.Description.Length,
+				//IsHidden = !item.IsVisible
+
+				Id = 1,
+				Name = item.Name,
 			};
 
-			return View("ItemAdded", viewModel);
-			//return RedirectToAction("ItemAdded");
+			//return View("ItemAdded", viewModel);
+			return RedirectToAction("ItemAddedConfirmation");
+		}
+
+		[HttpGet]
+		public IActionResult ItemAddedConfirmation()
+		{
+			return View();
 		}
 	}
 }
