@@ -8,14 +8,13 @@
 		const endpoint = "api/exchanges"
 		const requestData = JSON.stringify({
 			Name: formElement.querySelector('input[name="Name"]').value,
-			Description: formElement.querySelector('textarea[name="Description"]').value,
+			Description: formElement.querySelector('input[name="Description"]').value,
 			isVisible: formElement.querySelector('input[name="IsVisible"]').checked
 		});
 
 		const jsonConfig = {
 			method: "POST",
 			headers: {
-				"Accept": "application/json",
 				"Content-type": "application/json"
 			},
 			body: requestData,

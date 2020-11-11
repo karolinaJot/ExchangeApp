@@ -11,7 +11,7 @@ namespace ExchangeApp.Web.Controllers
 {
 	[ApiController]
 	[Route("api/exchanges")]
-	public class MyApiController : ControllerBase
+	public class ApiController : ControllerBase
 	{
 		public IActionResult Post(ItemModel itemModel)
 		{
