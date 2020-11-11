@@ -5,7 +5,7 @@
 
 	const addNewItem = async () => {
 		// 1 read data from the form
-		const endpoint = "api/exchanges"
+		const endpoint = "/api/exchanges"
 		const requestData = JSON.stringify({
 			Name: formElement.querySelector('input[name="Name"]').value,
 			Description: formElement.querySelector('input[name="Description"]').value,
