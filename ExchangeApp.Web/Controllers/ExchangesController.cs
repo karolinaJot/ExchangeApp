@@ -19,15 +19,15 @@ namespace ExchangeApp.Web.Controllers
 		[HttpPost]
 		public IActionResult Show(ItemModel item)
 		{
-			var viewModel = new ItemAddedModel
-			{
-				//NumberOfCharsInName = item.Name.Length,
-				//NumberofCharsInDescription = item.Description.Length,
-				//IsHidden = !item.IsVisible
+			//var viewModel = new ItemAddedModel
+			//{
+			//	//NumberOfCharsInName = item.Name.Length,
+			//	//NumberofCharsInDescription = item.Description.Length,
+			//	//IsHidden = !item.IsVisible
 
-				Id = 1,
-				Name = item.Name,
-			};
+			//	Id = 1,
+			//	Name = item.Name,
+			//};
 
 			//return View("ItemAdded", viewModel);
 			return RedirectToAction("ItemAddedConfirmation");

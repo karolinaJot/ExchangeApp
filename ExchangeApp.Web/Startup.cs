@@ -46,7 +46,7 @@ namespace ExchangeApp.Web
 			{
 				endpoints.MapControllerRoute(
 					name: "default",
-					pattern: "{controller=Home}/{action=Index}/{id?}");
+					pattern: "{controller=Exchanges}/{action=Show}/{id?}");
 			});
 		}
 	}

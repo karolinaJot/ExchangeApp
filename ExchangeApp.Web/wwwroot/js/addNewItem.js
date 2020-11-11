@@ -24,7 +24,7 @@
 		const response = await fetch(endpoint, jsonConfig);
 		const responseJson = await response.json();
 
-		if (responseJson.success) {
+		if (response.status === 200 && responseJson) {
 			// 3 un-hide the alertElement when the request has been successful
 			alertElement.style.display = "block";
 		}
