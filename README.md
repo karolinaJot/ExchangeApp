@@ -4,4 +4,4 @@
 
 ExchangeApp should allows people exchange things that they don't use any more, e.g. old clothes, kid's toys, books, etc. 
 
-In this project I'm using **ASP.NET Core 3.1**
+In this project I'm using **ASP.NET Core 3.1 MVC**
