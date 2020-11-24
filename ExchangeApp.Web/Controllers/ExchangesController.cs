@@ -1,4 +1,6 @@
-﻿using ExchangeApp.Web.Models;
+﻿using ExchangeApp.Web.Database;
+using ExchangeApp.Web.Entities;
+using ExchangeApp.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +11,13 @@ namespace ExchangeApp.Web.Controllers
 {
 	public class ExchangesController : Controller
 	{
+
+		private readonly ExchangesDbContext _dbContext;
+		public ExchangesController(ExchangesDbContext dbContext)
+		{
+			_dbContext = dbContext;
+		}
+
 		[HttpGet]
 		public IActionResult Show()
 		{
@@ -19,15 +28,15 @@ namespace ExchangeApp.Web.Controllers
 		[HttpPost]
 		public IActionResult Show(ItemModel item)
 		{
-			//var viewModel = new ItemAddedModel
-			//{
-			//	//NumberOfCharsInName = item.Name.Length,
-			//	//NumberofCharsInDescription = item.Description.Length,
-			//	//IsHidden = !item.IsVisible
+			var entity = new ItemEntity
+			{
+				Name = item.Name,
+				Description = item.Description,
+				IsVisible = item.IsVisible
+			};
 
-			//	Id = 1,
-			//	Name = item.Name,
-			//};
+			_dbContext.Item.Add(entity);
+			_dbContext.SaveChanges();
 
 			//return View("ItemAdded", viewModel);
 			return RedirectToAction("ItemAddedConfirmation");

@@ -32,7 +32,7 @@
 
 	window.addEventListener("load", () => {
 		formElement.addEventListener("submit", event => {
-			event.preventDefault();
+			//event.preventDefault();
 
 			addNewItem().then(() => console.log("Added successfully"));
 		});
