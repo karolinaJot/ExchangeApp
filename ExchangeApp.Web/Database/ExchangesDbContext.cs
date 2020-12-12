@@ -17,8 +17,8 @@ namespace ExchangeApp.Web.Database
 		public DbSet<ItemEntity> Item { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder builder)
-		{ 
-		
+		{
+			builder.Entity<ItemEntity>().ToTable("Item");
 		}
 
 

@@ -38,13 +38,15 @@ namespace ExchangeApp.Web.Controllers
 			_dbContext.Item.Add(entity);
 			_dbContext.SaveChanges();
 
-			//return View("ItemAdded", viewModel);
-			return RedirectToAction("ItemAddedConfirmation");
+			return RedirectToAction("DisplayItemsList");
 		}
 
 		[HttpGet]
-		public IActionResult ItemAddedConfirmation()
+		public IActionResult DisplayItemsList()
 		{
+			ViewBag.Item = _dbContext.Item;
+
+			//return Json(new { data = _dbContext.Item.ToList() });
 			return View();
 		}
 	}

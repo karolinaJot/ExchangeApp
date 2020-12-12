@@ -27,11 +27,11 @@ namespace ExchangeApp.Web.Controllers
 				};
 
 				return Ok(response);
-		}
-			catch(Exception exception) 
+			}
+			catch (Exception exception)
 			{
 				return NotFound(exception);
-	}
-}
+			}
+		}
 	}
 }
