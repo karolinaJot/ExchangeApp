@@ -45,8 +45,6 @@ namespace ExchangeApp.Web.Controllers
 		public IActionResult DisplayItemsList()
 		{
 			ViewBag.Item = _dbContext.Item;
-
-			//return Json(new { data = _dbContext.Item.ToList() });
 			return View();
 		}
 	}
