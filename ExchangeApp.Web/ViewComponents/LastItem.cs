@@ -18,8 +18,8 @@ namespace ExchangeApp.Web.ViewComponents
 
 		public IViewComponentResult Invoke()
 		{
-			var latestItem = _dbContext.Item.OrderByDescending(x => x.Id).First();
-			return View("Index", latestItem);
+			var lastItem = _dbContext.Item.OrderByDescending(x => x.Id).First();
+			return View("Index", lastItem);
 		}
 	}
 }
